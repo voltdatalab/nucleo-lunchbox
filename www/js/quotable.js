@@ -5,6 +5,7 @@ var $themeButtons = null;
 var $aspectRatioButtons = null;
 var $quote = null;
 var $fontSize = null;
+var $fontFamily = null;
 var $show = null;
 var $source = null;
 var $quote = null;
@@ -12,35 +13,34 @@ var $logoWrapper = null;
 
 var quotes = [
     {
-        "quote": "I'd been drinking.",
-        "source": "Dennis Rodman"
+        "quote": "Uma vida não questionada não merece ser vivida.",
+        "source": "Platão"
     },
     {
-        "quote": "I've made a huge mistake.",
-        "source": "G.O.B."
+        "quote": "A amizade é um amor que nunca morre.",
+        "source": "Mario Quintana"
     },
     {
-        "quote": "Yes, I have smoked crack cocaine",
-        "source": "Toronto Mayor Rob Ford",
+        "quote": "Tenho em mim todos os sonhos do mundo.",
+        "source": "Fernando Pessoa",
         "size": 65
     },
     {
-        "quote": "Annyong.",
-        "source": "Annyong",
+        "quote": "Ser ou não ser.",
+        "source": "William Shakespeare",
         "size": 90
     },
     {
-        "quote": "STEVE HOLT!",
-        "source": "Steve Holt",
+        "quote": "O inimigo do homem é o proprio homem!",
+        "source": "Mateus 10:36",
         "size": 65
     },
     {
-        "quote": "Whoa, whoa, whoa. There's still plenty of meat on that bone. Now you take this home, throw it in a pot, add some broth, a potato. Baby, you've got a stew going.",
-        "source": "Carl Weathers",
+        "quote": "Nossas dúvidas são traidoras e nos fazem perder o que, com frequência, poderíamos ganhar, por simples medo de arriscar.",
+        "source": "William Shakespeare",
         "size": 40
     }
 ];
-
 
 // Change straight quotes to curly and double hyphens to em-dashes.
 function smarten(a) {
@@ -124,6 +124,7 @@ $(function() {
     $save = $('#save');
     $poster = $('.poster');
     $themeButtons = $('#theme .btn');
+    $fontFamilyButtons = $('#fontfamily .btn');
     $aspectRatioButtons = $('#aspect-ratio .btn');
     $fontSize = $('#fontsize');
     $show = $('#show');
@@ -148,6 +149,18 @@ $(function() {
         $poster.removeClass('poster-theme1 poster-theme2 poster-theme3 poster-theme4')
                     .addClass('poster-' + $(this).attr('id'));
     });
+
+    $fontFamilyButtons.on('click', function() {
+        $fontFamilyButtons.removeClass().addClass('btn btn-primary');
+        $(this).addClass('active');
+
+        var fontFamily = $(this).attr('id');
+        $poster.css('font-family', fontFamily);
+        if ($fontFamily.val() !== fontFamily){
+            $fontFamily.val(fontFamily);
+        };
+    });
+
 
     $aspectRatioButtons.on('click', function() {
         $aspectRatioButtons.removeClass().addClass('btn btn-primary');

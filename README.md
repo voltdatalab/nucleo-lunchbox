@@ -1,13 +1,9 @@
 <img src="http://blog.apps.npr.org/lunchbox/img/icon-lunchbox.svg" width="150" alt="Lunchbox">
 =============
+Images for Núcleo Version:
+-------------
+![Apresentação da Versão do Núcleo](nucleo.gif)
 
-* [What is this?](#what-is-this)
-* [Assumptions?](#assumptions)
-* [What's in here?](#what-is-in-here)
-* [Quick start](#quick-start)
-* [Configuration](#configuration)
-* [Deploy the desktop app](#deploy-the-desktop-app)
-* [About](#about)
 
 What is this?
 -------------

@@ -1,7 +1,9 @@
 <img src="http://blog.apps.npr.org/lunchbox/img/icon-lunchbox.svg" width="150" alt="Lunchbox">
 =============
+
 Images for Núcleo Version:
 -------------
+
 ![Apresentação da Versão do Núcleo](nucleo.gif)
 
 
